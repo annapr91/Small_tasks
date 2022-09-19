@@ -1,14 +1,14 @@
 import random
-random.seed(12)
+random.seed(13)
 a= [random.randint(1,15) for i in range(25)]
 print(a)
 
-new=[]
+while a!=sorted(a):
+     for j in range(len(a)-1):
+          if a[j]>a[j+1]:
+               a[j],a[j+1]=a[j+1],a[j]
 
-while len(a)!=0:
-    b=min(a)
-    a.remove(b)
-    if b not in new:
-        new.append(b)
 
-print(new)
+
+
+print(a)
